@@ -8,7 +8,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "docker:image": "docker build -t my-angular-nginx-image .",
+    "docker:run": "docker run --name my-angular-app -v /nginx-logs:/var/log/nginx -p 8080:80 -d my-angular-nginx-image"
   },
   "private": true,
   "dependencies": {
